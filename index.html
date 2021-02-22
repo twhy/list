@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="modal left" id="questionNavModal" tabindex="-1" role="dialog" style="display: block"
+    aria-labelledby="questionNavModalModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-block">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h3 class="modal-title" id="questionNavModalModalLongTitle">Title</h3>
+        </div>
+        <div class="modal-body">
+          <ul class="question-nav-ul">
+            <li class="question-nav-li"><a class="question-nav-link" href="#">Item</a></li>
+            <li class="question-nav-li"><a class="question-nav-link" href="#">Item</a></li>
+            <li class="question-nav-li-muted"><a class="question-nav-link-muted" href="#">Item</a></li>
+            <li class="question-nav-li-muted"><a class="question-nav-link-muted" href="#">Item</a></li>
+            <li class="question-nav-li"><a class="question-nav-link" href="#">Item</a></li>
+            <li class="question-nav-li-muted"><a class="question-nav-link-muted" href="#">Item</a></li>
+            <li class="question-nav-li-muted"><a class="question-nav-link-muted" href="#">Item</a></li>
+            <li class="question-nav-li"><a class="question-nav-link" href="#">Item</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .question-nav-link {
+      opacity: 0.92;
+      font-size: 14px;
+    }
+
+    .question-nav-link-muted {
+      color: #6c757d;
+      opacity: 0.5;
+      font-size: 14px;
+    }
+
+    .question-nav-li {
+      color: #007bff;
+      /* list-style: circle; */
+      margin-bottom: 1rem;
+    }
+
+    .question-nav-li-muted {
+      color: #9ea1a3;
+      margin-bottom: 1rem;
+    }
+
+    .question-nav-ul {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 21px;
+    }
+
+    ul.question-nav-ul li {
+      position: relative;
+      /* so that pseudoelements are positioned relatively to their "li"s*/
+      /* use padding-bottom instead of margin-bottom.*/
+      margin-bottom: 0;
+      /* This overrides previously specified margin-bottom */
+      padding-bottom: 2.5em;
+    }
+
+    ul.question-nav-ul li:after {
+      /* bullets */
+      /* content: url('http://upload.wikimedia.org/wikipedia/commons/thumb/3/30/RedDisc.svg/20px-RedDisc.svg.png'); */
+      position: absolute;
+      left: -26px;
+      /*adjust manually*/
+      top: 0px;
+      /* opacity:0.2; */
+    }
+
+    ul.question-nav-ul li:before {
+      /* lines */
+      content: "";
+      position: absolute;
+      left: -15px;
+      border-left: 1px solid;
+      border-color: #6c757d;
+      height: 100%;
+      width: 1px;
+      z-index: 0;
+      opacity: 0.2;
+    }
+
+    ul.question-nav-ul li:first-child:before {
+      /* first li's line */
+      top: 10px;
+      /* moves the line down so that it disappears under the bullet. Adjust manually */
+      height: 85%;
+    }
+
+    ul.question-nav-ul li:last-child:before {
+      /* last li's line */
+      height: 10px;
+      /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+    }
+  </style>
+</body>
+
+</html>
